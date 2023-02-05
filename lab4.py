@@ -11,3 +11,19 @@ print('7, начинаются ли слова в строке с прописн
 print('8, написание с заглавной буквы: ', s2.capitalize())
 print('9, проверка на пробелы: ', s1.isspace())
 print('10, замена символов: ', s1.replace('a', 'b'))
+
+# Напишите программу, в которой предлагается вводить учащихся различных груп, посещающих секции по программированию. Требуется упорядочить список по возрастанию классов. Распечатать список фамилий и классов. 
+students = []
+while True:
+    student = input("Enter the name and class of a student (or type 'q' to quit): ")
+    if student == 'q':
+        break
+    name, grade = student.split() 
+    students.append((name, int(grade))) 
+students.sort(key=lambda x: x[1]) #лямбда x: x[1] — короткая анонимная функция, возвращает 2 элемент каждого кортежа в списке, и sort использует его в качестве ключа сортировки.
+
+for student in students:
+    print(f"{student[0]}: Class {student[1]}")
+
+
+
