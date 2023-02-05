@@ -49,5 +49,17 @@ else:
 #Input             Output
 #GOOD Code       GOOD CODE
 
+'''Строковый метод isdigit() проверяет, состоит ли строка только из цифр. Напишите программу, которая запрашивает с ввода два целых числа и выводит их сумму. 
+В случае некорректного ввода программа не должна завершаться с ошибкой, а должна продолжать запрашивать числа'''
+def add_numbers():
+    while True:
+        num1 = input("Enter first number: ")
+        num2 = input("Enter second number: ")
+        if num1.isdigit() and num2.isdigit():
+            sum = int(num1) + int(num2)
+            return sum
+        else:
+            print("Invalid input, enter only numbers")
 
+print("The sum is:", add_numbers())
 
