@@ -21,6 +21,31 @@ for i in range(0,n):
     list.append(a)
 print(list)
 
+#используйте функции randint() randrange() random() enumerate()  в своей программе
+import random
+list1 = []
+list2 = []
+list3 = []
+subjects = ['Data Analysis', 'Software Engineering', 'Functional programming']
+n = int(input("Enter the number of elements: "))
+for i in range(0,n):
+    a = random.randint(3, 9) # случайное целое число в диапазоне от [3, 9] включительно 
+    list1.append(a)
+    b = random.randrange(3, 9) # случайное целое число в диапазоне от [3, 9) не включая 9
+    list2.append(b)
+    c = random.random() # случайное вещественное число в диапазоне от [0.0, 1.0)
+    list3.append(c)
+print("list1:", list1)
+print("list2:", list2)
+print("list3:", list3)
+print(list(enumerate(subjects))) #добавляет счетчик к итерируемому объекту и возвращает его значения вместе с индексами
+
+#Output
+# Enter the number of elements: 6
+# list1: [7, 6, 3, 4, 6, 7]
+# list2: [7, 4, 8, 8, 3, 3]
+# list3: [0.20580043226747546, 0.6262062191814559, 0.01843029792422346, 0.28487991839837545, 0.8237896665870552, 0.7850264862795829]
+# [(0, 'Data Analysis'), (1, 'Software Engineering'), (2, 'Functional programming')]
 
 #1. Даны два целых числа A и B (при этом A ≤ B). Выведите все числа от A до B включительно.
 A = int(input('A = '))
